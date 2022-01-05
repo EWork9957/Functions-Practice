@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Function Assignment</title>
+    </head>
+
+    <body>
+        <script>
+//EXAMPLE 1
+    function length(){
+            var text = prompt("Enter a sentence to find the length: ");
+            var textLength = text.length;
+            alert("The length of the text is: " + textLength)
+        }
+//EXAMPLE 2
+        function uppercase(){
+            var text = prompt("Enter a sentence to capitalize: ")
+            var textUppercase = text.toUpperCase();
+            alert("The sentence capitalized is: " + textUppercase)
+        }
+
+//EXAMPLE 3
+        function lowercase(){
+            var text = prompt("Enter a sentence to un-capitalize: ")
+            var textLowercase = text.toLowerCase();
+            alert("The sentence un-capitalized is: " + textLowercase)
+        }
+//EXAMPLE 4
+        function sum(){
+            var num1 = prompt("Enter a number to find a sum: ");
+            var num2 = prompt("Enter another number: ");
+            var numSum = Number(num1) + Number(num2);
+            alert("The sum of your two numbers is: " + String(numSum));
+        }
+//EXAMPLE 5
+        function product(){
+            var num1 = prompt("Enter a number to find a product: ");
+            var num2 = prompt("Enter another number: ");
+            var numProduct = Number(num1) * Number(num2);
+            alert("The product of your two numbers is: " + String(numProduct));
+        }
+//EXAMPLE 6
+        function remainder(){
+            var num1 = prompt("Enter a number to find a remainder: ");
+            var num2 = prompt("Enter another number: ");
+            var numRemainder = Number(num1) % Number(num2);
+            alert("The remainder of your two numbers is: " + String(numRemainder));
+        }
+//EXAMPLE 7
+        function tempConvert(){
+            var userTemp = prompt("Choose a temperature to convert, Celsius or Fahrenheit");
+                if (userTemp == "Fahrenheit") {
+                    var fTemp = prompt("What is the temperature in Fahrenheit: ");
+                    var convert = (5/9 * (Number(fTemp) - 32));
+                    alert(fTemp + " degrees Fahrenheit is " + convert + " degrees Celsius.");
+                } if (userTemp == "Celsius") {
+                    var cTemp = prompt("What is the temperature in Celsius: ");
+                    var convert = ((9/5 * Number(cTemp)) + 32);
+                    alert(cTemp + " degrees Celsius is " + convert + " degrees Fahrenheit.");
+                } if (userTemp != "Fahrenheit" || "Celsius") {
+                    alert("Please try again.")
+                }
+        }
+        </script>
+        <h1>Functions Practice</h1><br><br>
+        
+        <button onclick="length()">Length</button><br>
+        <button onclick="uppercase()">Uppercase</button><br>
+        <button onclick="lowercase()">Lowercase</button><br>
+        <button onclick="sum()">Sum</button><br>
+        <button onclick="product()">Product</button><br>
+        <button onclick="remainder()">Remainder</button><br>
+        <button onclick="tempConvert()">Temp Conversion</button><br>
+    </body>
+</html>
